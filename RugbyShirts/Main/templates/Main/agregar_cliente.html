@@ -1,0 +1,16 @@
+<!-- templates/miapp/agregar_cliente.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agregar Cliente</title>
+</head>
+<body>
+    <h1>Agregar Cliente</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+    <a href="{% url 'Main:lista_clientes' %}">Ver lista de clientes</a>
+</body>
+</html>

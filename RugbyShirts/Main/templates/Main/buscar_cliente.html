@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Buscar Cliente{% endblock %}
+
+{% block content %}
+<h2>Buscar Cliente</h2>
+<form method="GET">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Buscar</button>
+</form>
+
+<ul>
+    {% for cliente in clientes %}
+        <li>{{ cliente.nombre }} - {{ cliente.email }}</li>
+    {% empty %}
+        <li>No se encontraron clientes.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
