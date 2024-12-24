@@ -14,9 +14,6 @@ Este proyecto es una aplicación de Django donde se gestionan funcionalidades re
 2. Instala las dependencias:
     pip install -r requirements.txt
 
-3. Realiza las migraciones de la base de datos:
-    python manage.py migrate
-
 4. Corre el servidor local:
     python manage.py runserver
 
